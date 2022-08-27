@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar nav {
+  --padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: #0ae;
+  box-shadow: 10px 10px 99px -45px rgba(0, 0, 0, 0.75);
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar nav a {
+  font-size: 1.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar nav ul li {
+  cursor: pointer;
+  margin: auto 0.55rem;
+}
+
+.navbar nav ul li::after {
+  opacity: 0;
+  position: relative;
+  content: '_';
+  z-index: 9999;
+  left: -2rem;
+  top: 0.25rem;
+  transition: opacity 0.39s linear;
+}
+
+.navbar nav ul li:hover::after {
+  opacity: 1;
+}
+
+main {
+  --m: 1rem;
+  margin: var(--m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  --lr: 4rem;
+  background-color: white;
+  padding: 1rem var(--lr);
+  border-radius: 15px;
+  box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+}
+
+table tbody tr th {
+  --r: 0.5rem;
+  padding: 0 var(--r);
+}
+
+.right {
+  --m: 6rem;
+  margin: 0 var(--m);
+}
+
+.btn {
+  --tb: 1rem;
+  --lr: 2rem;
+  border: none;
+  outline: none;
+  background-color: #0ae;
+  padding: var(--tb) var(--lr);
+  font-weight: 700;
+  border-radius: 15px;
+  transition:
+    border 0.39s linear,
+    background-color 0.39s 0.09s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 6px solid #0ae;
+  background-color: white;
+}
+
+#profileExpand {
+  visibility: hidden;
+  position: relative;
+  float: right;
+  left: -6.9rem;
+  top: -3rem;
+  z-index: 9999999;
+  background-color: white;
+  box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+  padding: 0 1rem;
+  border-radius: 15px;
+  animation: pop 0.39s linear;
+}
+
+#profileExpand.active {
+  visibility: visible;
+}
+
+.nls {
+  text-decoration: none;
+  color: #0ae;
+}
+
+.nls.red {
+  text-decoration: none;
+  color: red;
+}
+
+.nls.bttn {
+  border: 3px solid black;
+  outline: none;
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0.5rem;
+}

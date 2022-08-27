@@ -1,0 +1,44 @@
+body {
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form form {
+  --tb: 8rem;
+  --lr: 1rem;
+  min-width: 480px;
+  box-shadow: 10px 10px 99px -30px rgba(0, 0, 0, 0.75);
+  padding: var(--tb) var(--lr);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+  color: #363636;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  --s: 3rem;
+  width: calc(var(--s) * 4);
+  height: var(--s);
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  background-color: var(--blue);
+}
+
+label {
+  float: left;
+}
